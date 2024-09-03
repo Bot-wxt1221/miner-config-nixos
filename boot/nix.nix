@@ -8,20 +8,6 @@
   imports = [
 
   ];
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "nodev";
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.grub.efiSupport = true;
-  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_zen;
-  hardware.firmware = [ pkgs.linux-firmware ];
-  networking.networkmanager.enable = true;
-  networking.firewall.enable = false;
-  services.openssh.settings.PermitRootLogin = "yes";
-  users.users."root".openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPfk1DLJF9a0qbrNYTGTzY59oPAO/+vU4GWA8/6U84U3 zigao"
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIB9OCkgPcdNq/0S7e4UtyrxYfYCoQuS16aAsQqCUd6xp wxt@wxt-school-vmware" 
-  ];
-  services.openssh.enable = true;
   system.stateVersion = "unstable"; # Did you read the comment?
   nix.settings.substituters = [
     "https://mirrors.ustc.edu.cn/nix-channels/store"
