@@ -18,6 +18,7 @@
           ./nixos-1
           ./proxy
           ./xmrig
+          ./rustdesk
           ./xmrig-proxy.nix
           ./boot
         ];
