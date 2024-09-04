@@ -9,10 +9,10 @@ let
     version = "6.22.0";
 
     src = pkgs.fetchFromGitHub {
-      owner = "xmrig";
-      repo = "xmrig";
-      rev = "v6.22.0";
-      hash = "sha256-kFjUAOs92xExCV/ph81TFvgRXC6ZRi1m0G51c4JmeMA=";
+      owner = "C3Pool";
+      repo = "xmrig-C3";
+      rev = "v6.22.0-C5";
+      hash = "sha256-VpBYhGlyTnFybhBhyniMT6Q/p876EWTr+M49uX/68wY=";
     };
 
     env.NIX_CFLAGS_COMPILE = toString [
