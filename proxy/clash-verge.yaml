@@ -4,6 +4,28 @@ allow-lan: true
 mode: Rule
 log-level: info
 external-controller: :9090
+dns:
+  use-system-hosts: false
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+  - 114.114.114.114
+  - 223.5.5.5
+  - 8.8.8.8
+  fallback: []
+profile:
+  store-selected: true
+tun:
+  stack: gvisor
+  device: Mihomo
+  auto-route: true
+  strict-route: false
+  auto-detect-interface: true
+  dns-hijack:
+  - any:53
+  mtu: 1500
+  enable: true
 proxies:
   - {name: 🇨🇳 台湾 02|HiNet|台北市|1.0, server: wdnbiawhiqow.pite174.net, port: 46732, type: vmess, uuid: 01a3e529-acb1-3935-82b2-9c48d0ebd9b6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /soda, headers: {Host: www.alidns.com}}, udp: true}
   - {name: 🇨🇳 台湾 03|HiNet|新北市|1.0, server: wdnbiawhiqow.pite174.net, port: 11894, type: vmess, uuid: 01a3e529-acb1-3935-82b2-9c48d0ebd9b6, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /soda, headers: {Host: www.alidns.com}}, udp: true}
